@@ -1,0 +1,66 @@
+package act7jva;
+
+public class Methods {
+    
+    PrimeChecker Prime = new PrimeChecker();
+    
+    public int[] ArregloPrimos(int[] a){
+        
+        int pos = 0;
+        int c = 0;
+        boolean isPrime = true;
+        
+        while(pos != a.length){
+            
+            isPrime = Prime.NumeroPrimo(c);
+            
+            if(isPrime){
+                
+                a[pos] = c;
+                pos++;
+            }
+            
+            c++;
+        }   
+         
+        
+        return a;
+    }
+    
+    public int[] ArregloFibonacci(int[] a){
+        
+        int ans = 1, cur = 0, temp;
+        a[0] = cur;
+        
+        for(int i = 1; i < a.length; i++){
+            
+            temp = ans + cur;
+            
+            a[i] = temp;
+            
+            ans = cur;
+            cur = temp;
+            
+        }
+                
+        return a;
+    }
+    
+    public void Printer(int[] a){
+        
+        System.out.print("Secuencia: ");
+        
+        for(int i = 0; i < a.length; i++){
+            
+            System.out.print(a[i] + ", ");
+            
+            if(i%5 == 0){
+                System.out.println("");
+            }
+            
+        }
+        
+        System.out.println("");
+    }
+    
+}
