@@ -1,0 +1,31 @@
+package act7jva;
+import java.util.Scanner;
+
+public class Act7jva {
+
+    public static void main(String[] args) {
+        
+        Scanner Line = new Scanner(System.in);
+        Methods Objs = new Methods();
+        
+        int n;     
+        
+        System.out.print("Número a evaluar: ");
+        n = Line.nextInt();
+        
+        System.out.println("");
+        
+        int[] arregloPrimos = new int[n];
+        
+        arregloPrimos = Objs.ArregloPrimos(arregloPrimos);
+        
+        int[] arregloFibonn = new int[n];
+        
+        arregloFibonn = Objs.ArregloFibonacci(arregloFibonn);
+        
+        Objs.Printer(arregloFibonn);
+        Objs.Printer(arregloPrimos);
+        
+    }
+    
+}
